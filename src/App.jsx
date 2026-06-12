@@ -52,7 +52,7 @@ const App = () => {
           {/* textarea for description */}
           <textarea required type="text" value={description} onChange={(e) => {
             inputDescription(e)
-          }} placeholder='Write Details' className='px-5 pb-20 pt-5 text-neutral border-2 border-[#000000b8]rounded outline-none text-2xl' />
+          }} placeholder='Write Details' className='px-5 pb-20 pt-5 text-neutral border-2 border-[#000000b8] rounded outline-none text-2xl' />
 
 
           <button className='mt-5 px-5 py-2 border bg-[#000000a7] text-white rounded-full cursor-pointer text-2xl active:bg-gray-700 active:scale-95'>Add Note</button>
@@ -63,13 +63,13 @@ const App = () => {
 
       <div className="flex flex-col items-center gap-10 p-10 border-t-2">
         <h1 className="text-neutral-600 text-6xl ">Your Notes</h1>
-        <div className="flex gap-10 flex-wrap justify-center overflow-auto h-full max-w-4xl scrollbar-none">
+        <div className="flex gap-10 flex-wrap justify-center overflow-auto h-90 max-w-4xl scrollbar-none">
 
           {task.map(function (e, idx) {
             return <div key={idx} className="h-90 w-100  rounded-2xl bg-amber-100 text-black p-10 flex flex-col justify-between">
               <div className="wrap-anywhere"><h3 className="text-xl font-bold mb-5">{e.title}</h3>
               <p>{e.description}</p></div>
-              <button onClick={(idx) =>{
+              <button onClick={() =>{
                 delBtn(idx)
               }} className="btn bg-[#bb2b2b] text-white border-[#aa0c0c] w-full">
                 
@@ -80,6 +80,11 @@ const App = () => {
           })}
         </div>
       </div>
+      <footer className="footer sm:footer-horizontal footer-center bg-base-300 text-base-content p-4">
+  <aside>
+    <p>Copyright © {new Date().getFullYear()} - by ADITYA</p>
+  </aside>
+</footer>
     </div>
 
   )
