@@ -70,7 +70,7 @@ const App = () => {
               <div className="wrap-anywhere"><h3 className="text-xl font-bold mb-5">{e.title}</h3>
               <p>{e.description}</p></div>
               <button onClick={(idx) =>{
-                delBtn()
+                delBtn(idx)
               }} className="btn bg-[#bb2b2b] text-white border-[#aa0c0c] w-full">
                 
                 Delete
